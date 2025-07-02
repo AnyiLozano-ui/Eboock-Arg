@@ -1,0 +1,387 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: hsl(0, 0%, 5%);
+	-webkit-user-select: none;
+	user-select: none;
+	cursor: default;
+}
+
+html {
+	background: hsl(0, 3%, 6%);
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.ancho {
+	position: relative !important;
+	width: 100vw;
+	height: calc((10 / 16) * 120vw);
+	left: calc(50% - 50vw);
+	top: calc(50% - (((10 / 16) * 110vw) / 2));
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+	.ancho {
+		top: calc(50% - (((10 / 16) * 120vw) / 2));
+	}
+}
+
+.alto {
+	width: calc((16 / 10) * 83vh);
+	height: 100vh;
+	top: calc(50% - 50vh);
+	left: calc(50% - (((16 / 10) * 83vh) / 2));
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background-color: #ffffff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.abs {
+	position: absolute;
+}
+
+.back {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.portada {
+	position: absolute;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	/* background-image: url(../images/slider2.jpg); */
+}
+
+.logo {
+	position: absolute;
+    width: 23%;
+    /* height: 44.5%; */
+    top: -3%;
+    left: 77.3%;
+	z-index: 10;
+}
+
+.logo img {
+	width: 100%;
+	height: 100%;
+}
+
+.atras {
+	position: absolute;
+	width: 3.3%;
+	height: 5%;
+	top: 85.3%;
+    border-radius: 100px;
+    right: 12.1%;
+	bottom: 2.6%;
+	cursor: pointer;
+	z-index: 10;
+}
+
+.adelante {
+	position: absolute;
+	width: 3.3%;
+	height: 5%;
+	top: 85.3%;
+	border-radius: 100px;
+	right: 7.6%;
+	bottom: 2.6%;
+	cursor: pointer;
+	z-index: 10;
+}
+
+.btn0 {
+	position: absolute;
+	width: 3.3%;
+	height: 5%;
+	top: 85.3%;
+	border-radius: 100px;
+	right: 16.9%;
+	bottom: 2.6%;
+	cursor: pointer;
+	z-index: 10;
+}
+
+.btn1 {
+	position: absolute;
+	width: 35%;
+	height: 6.4%;
+	top: 34.6%;
+	/* border-radius: 100px; */
+	left: 34%;
+	bottom: 2.6%;
+	cursor: pointer;
+	z-index: 10;
+}
+
+.btn2 {
+	position: absolute;
+	width: 35%;
+	height: 5.7%;
+    top: 42.2%;
+	/* border-radius: 100px; */
+	left: 34%;
+	bottom: 2.6%;
+	z-index: 10;
+	cursor: pointer;
+}
+
+.btn3 {
+	border-radius: 100px;
+	position: absolute;
+	width: 35%;
+	height: 6.4%;
+	top: 49%;
+	/* border-radius: 100px; */
+	left: 34%;
+	z-index: 10;
+	cursor: pointer;
+}
+
+.boton1 {
+	position: absolute;
+	width: 33.1%;
+    top: 35%;
+    left: 35.5%;
+	z-index: 10;
+	cursor: pointer;
+}
+
+.boton1 img {
+	width: 100%;
+	height: 100%;
+}
+
+.boton2 {
+	position: absolute;
+	width: 33.1%;
+	top: 41.9%;
+    left: 35.5%;
+	z-index: 10;
+	cursor: pointer;
+}
+
+.boton2 img {
+	width: 100%;
+	height: 100%;
+}
+
+.boton3 {
+	position: absolute;
+	width: 33.1%;
+	top: 48.8%;
+    left: 35.5%;
+	z-index: 10;
+	cursor: pointer;
+}
+
+.boton3 img {
+	width: 100%;
+	height: 100%;
+}
+
+.base {
+	position: absolute;
+	width: 70%;
+	left: 35.9%;
+	top: 64.4%;
+	height: 14%;
+	z-index: 2;
+	opacity: 0;
+	animation: fadeIn 4s ease-in forwards;
+}
+
+.base img {
+	width: 100%;
+	height: 100%;
+}
+
+.video {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0%;
+	left: 0%;
+	background: #0000004f;
+	object-fit: cover;
+	border-radius: 134px;
+}
+
+@keyframes aparecer {
+	from {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.animacion-aparecer {
+	animation: aparecer 0.3s ease-out;
+}
+
+@keyframes aparecerOpacidad {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.animacion-aparecer-opacidad {
+	animation: aparecerOpacidad 0.6s ease-out;
+}
+@keyframes aparecerDesdeDerecha {
+	from {
+		opacity: 0;
+		transform: translateX(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.animacion-aparecer-derecha {
+	animation: aparecerDesdeDerecha 0.3s ease-out;
+}
+@keyframes aparecerConEscala {
+	from {
+		opacity: 0;
+		transform: scale(0.8);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.animacion-aparecer-escala {
+	animation: aparecerConEscala 0.2s ease-out;
+}
+@keyframes aparecerConEscala {
+	from {
+		opacity: 0;
+		transform: scale(0.8);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.animacion-aparecer-escala {
+	animation: aparecerConEscala 0.3s ease-out;
+}
+
+.animacion-aparecer-escala2 {
+	animation: aparecerConEscala 0.4s ease-in-out;
+}
+
+@media screen and (max-width: 500px) {
+	.btn1 {
+		width: 57%;
+		height: 6.6%;
+        top: 22.5%;
+		left: 22%;
+		bottom: auto;
+		z-index: 10;
+	}
+
+	.btn2 {
+		width: 57%;
+		height: 6.6%;
+        top: 30.9%;
+		left: 22%;
+		bottom: auto;
+		z-index: 10;
+	}
+
+	.btn3 {
+		width: 57%;
+		height: 6.6%;
+        top: 39.2%;
+		left: 22%;
+		bottom: auto;
+		z-index: 10;
+	}
+
+	.atras {
+		width: 10.1%;
+        height: 37%;
+        top: 15%;
+        border-radius: 100px;
+        right: 22%;
+        z-index: 10;
+        bottom: auto;
+	}
+
+	.adelante {
+		width: 10.1%;
+        height: 38%;
+        top: 15%;
+        border-radius: 100px;
+        right: 9.8%;
+        z-index: 10;
+        bottom: auto;
+	}
+
+	.btn0 {
+		width: 10.1%;
+        height: 36.9%;
+        top: 15%;
+        border-radius: 100px;
+        right: 35.5%;
+        z-index: 10;
+        bottom: auto;
+	}
+
+	.boton1 {
+		width: 58.5%;
+        top: 22.5%;
+        left: 21%;
+		z-index: 10;
+	}
+
+	.boton2 {
+		width: 58.5%;
+        top: 30.7%;
+        left: 21%;
+		z-index: 10;
+	}
+
+	.boton3 {
+		width: 58.5%;
+        top: 39%;
+        left: 21%;
+		z-index: 10;
+	}
+}
+
+.mobile {
+	height: 100dvh;
+	align-items: center;
+}
+
+.mobile-container {
+	position: relative;
+}

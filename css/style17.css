@@ -1,0 +1,491 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: hsl(0, 0%, 5%);
+	-webkit-user-select: none;
+	user-select: none;
+	cursor: default;
+}
+
+html {
+	background: hsl(0, 3%, 6%);
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.ancho {
+	position: relative !important;
+	width: 100vw;
+	height: calc((10 / 16) * 120vw);
+	left: calc(50% - 50vw);
+	top: calc(50% - (((10 / 16) * 110vw) / 2));
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+	.ancho {
+		top: calc(50% - (((10 / 16) * 120vw) / 2));
+	}
+}
+
+.alto {
+	width: calc((16 / 10) * 83vh);
+	height: 100vh;
+	top: calc(50% - 50vh);
+	left: calc(50% - (((16 / 10) * 83vh) / 2));
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background-color: #ffffff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.abs {
+	position: absolute;
+}
+
+.back {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.portada {
+	position: absolute;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/slider17.jpg);
+}
+
+.logo {
+	position: absolute;
+    width: 23%;
+    /* height: 44.5%; */
+    top: -3%;
+    left: 77.3%;
+	z-index: 10;
+}
+
+.logo img {
+	width: 100%;
+	height: 100%;
+}
+
+.atras {
+	position: absolute;
+	width: 4%;
+	height: 5%;
+	top: 83.5%;
+	border-radius: 100px;
+	right: 5.6%;
+	bottom: 2.6%;
+	cursor: pointer;
+}
+
+.adelante {
+	position: absolute;
+	width: 4%;
+	height: 5%;
+	top: 83.5%;
+	border-radius: 100px;
+	right: 0.9%;
+	bottom: 2.6%;
+	cursor: pointer;
+}
+
+.btn1 {
+	position: absolute;
+	width: 5%;
+	height: 7%;
+	top: 89.9%;
+	border-radius: 100px;
+	right: 2.4%;
+	bottom: 2.6%;
+	cursor: pointer;
+}
+
+.base {
+	position: absolute;
+	width: 70%;
+	left: 35.9%;
+	top: 64.4%;
+	height: 14%;
+	z-index: 2;
+	opacity: 0;
+	animation: fadeIn 4s ease-in forwards;
+}
+
+.base img {
+	width: 100%;
+	height: 100%;
+}
+
+.grafica1 {
+	position: absolute;
+    width: 4.8%;
+    left: 15.5%;
+	bottom: 41.8%;
+    height: 2.2%;
+}
+
+.grafica1 img {
+	width: 100%;
+	height: 100%;
+	animation: subirDesdeAbajo 2s linear forwards;
+	position: absolute;
+	bottom: 0;
+}
+
+/* Animación moviendo top */
+@keyframes subirDesdeAbajo {
+	from {
+		height: 0;
+		/* opacity: 0; */
+	}
+	to {
+		height: 100%; /* Termina en su posición real */
+		/* opacity: 1; */
+	}
+}
+
+.grafica2 {
+	position: absolute;
+    width: 4.8%;
+    left: 20.8%;
+	bottom: 41.8%;
+    height: 25.9%;
+}
+
+.grafica2 img {
+	width: 100%;
+	height: 100%;
+	animation: subirDesdeAbajo 2s linear forwards;
+	position: absolute;
+	bottom: 0;
+}
+
+/* Animación moviendo top */
+@keyframes subirDesdeAbajo {
+	from {
+		height: 0;
+		/* opacity: 0; */
+	}
+	to {
+		height: 100%; /* Termina en su posición real */
+		/* opacity: 1; */
+	}
+}
+
+.grafica3 {
+	position: absolute;
+    width: 4.8%;
+    left: 29.4%;
+	bottom: 41.9%;
+    height: 3.1%;
+}
+
+.grafica3 img {
+	width: 100%;
+	height: 100%;
+	animation: subirDesdeAbajo 2s linear forwards;
+	position: absolute;
+	bottom: 0;
+}
+
+/* Animación moviendo top */
+@keyframes subirDesdeAbajo {
+	from {
+		height: 0;
+		/* opacity: 0; */
+	}
+	to {
+		height: 100%; /* Termina en su posición real */
+		/* opacity: 1; */
+	}
+}
+
+.grafica4 {
+	position: absolute;
+    width: 4.8%;
+    left: 34.4%;
+    bottom: 41.9%;
+    height: 14.7%;
+}
+
+
+.grafica4 img {
+	width: 100%;
+	height: 100%;
+	animation: subirDesdeAbajo 2s linear forwards;
+	position: absolute;
+	bottom: 0;
+}
+
+/* Animación moviendo top */
+@keyframes subirDesdeAbajo {
+	from {
+		height: 0;
+		/* opacity: 0; */
+	}
+	to {
+		height: 100%; /* Termina en su posición real */
+		/* opacity: 1; */
+	}
+}
+
+
+
+/* modal  */
+.openModal {
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 21%;
+    height: 8%;
+    right: 39.7%;
+    top: 66%;
+	z-index: 100;
+	cursor: pointer;
+	border-radius: 64px;
+}
+
+.modal img {
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 300;
+	display: block;
+	left: 0%;
+	top: 0%;
+}
+
+.closeModal {
+	position: absolute;
+	width: 8%;
+	height: 10%;
+	z-index: 1000;
+	top: 38%;
+	right: 7%;
+	cursor: pointer;
+}
+
+@keyframes aparecer {
+	from {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.animacion-aparecer {
+	animation: aparecer 0.3s ease-out;
+}
+
+@keyframes aparecerOpacidad {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.animacion-aparecer-opacidad {
+	animation: aparecerOpacidad 0.6s ease-out;
+}
+@keyframes aparecerDesdeDerecha {
+	from {
+		opacity: 0;
+		transform: translateX(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.animacion-aparecer-derecha {
+	animation: aparecerDesdeDerecha 0.3s ease-out;
+}
+@keyframes aparecerConEscala {
+	from {
+		opacity: 0;
+		transform: scale(0.8);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.animacion-aparecer-escala {
+	animation: aparecerConEscala 0.2s ease-out;
+}
+@keyframes aparecerConEscala {
+	from {
+		opacity: 0;
+		transform: scale(0.8);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.animacion-aparecer-escala {
+	animation: aparecerConEscala 0.3s ease-out;
+}
+
+.animacion-aparecer-escala2 {
+	animation: aparecerConEscala 0.4s ease-in-out;
+}
+
+@media screen and (max-width: 500px) {
+	.gotas1 {
+		width: 13%;
+	}
+
+	.gotas2 {
+		width: 13%;
+	}
+
+	.gotas3 {
+		width: 14%;
+		height: 10%;
+	}
+
+	.gotas4 {
+		width: 19%;
+	}
+
+	.gotas5 {
+		width: 13%;
+	}
+
+	.gotas12 {
+		width: 13%;
+	}
+
+	.gotas13 {
+		width: 12%;
+	}
+
+	.gotas14 {
+		width: 14%;
+	}
+
+	.gotas15 {
+		width: 12%;
+	}
+
+	.gotas16 {
+		width: 12%;
+	}
+
+	.gotas17 {
+		width: 18%;
+	}
+
+	.gotas18 {
+		width: 12%;
+	}
+
+	.atras {
+		width: 9%;
+		height: 5.4%;
+		top: 78.8%;
+		right: 15%;
+	}
+
+	.adelante {
+		width: 9%;
+		height: 5.4%;
+		top: 78.8%;
+		right: 4%;
+	}
+
+	.btn1 {
+		width: 9%;
+		height: 5.4%;
+		top: 85.3%;
+		right: 4.6%;
+	}
+
+	.grafica1 {
+		width: 12.6%;
+        left: 25.2%;
+        bottom: 35.7%;
+        height: 3%;
+	}
+
+	.grafica2 {
+		width: 14.6%;
+        left: 39.2%;
+        bottom: 35.7%;
+        height: 27%;
+	}
+
+	.grafica3 {
+		width: 12.6%;
+        left: 61.2%;
+        bottom: 35.7%;
+        height: 4%;
+	}
+
+	.grafica4 {
+		width: 13.6%;
+        left: 74.2%;
+        bottom: 35.7%;
+        height: 15.5%;
+	}
+
+	.openModal {
+		width: 40%;
+        height: 5%;
+        right: 30.7%;
+        top: 74%;
+		z-index: 100;
+		border-radius: 64px;
+	}
+
+	.modal {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0%;
+		top: 0%;
+	}
+
+	.closeModal {
+		width: 17%;
+		height: 8%;
+		z-index: 1000;
+		top: 33%;
+		right: 2%;
+	}
+}
+
+.mobile {
+	height: 100dvh;
+	align-items: center;
+}
+
+.mobile-container {
+	position: relative;
+}
